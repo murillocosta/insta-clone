@@ -1,0 +1,200 @@
+* {
+  /*altera algumas configurações padrão*/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+/*formatação do body*/
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(243, 243, 243);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/*formatação do conteiner principal*/
+
+.insta-wrapper {
+  display: flex;
+  align-items: center; /*alinhamento vertical*/
+  justify-content: start; /*alinhamento horizontal*/
+  width: 60%;
+  height: 100vh;
+}
+
+/*formatação da img do celular*/
+/*div da img*/
+.insta-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+/*imagem do celular*/
+.insta-phone img {
+  height: 50rem;
+}
+
+/*formatação do conteiner da direita*/
+
+.insta-continue {
+  display: flex;
+  flex-direction: column; /*inverte a orientação do flex*/
+  align-items: center; /*horizontal*/
+  justify-content: space-around; /*vertical*/
+  width: 50%;
+  min-height: 34rem;
+}
+
+/*formatação dos conteiners group*/
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1.3rem 0;
+  border: 1px solid lightgray;
+}
+
+/*seleciona o filho do elemento group*/
+/*seleciona o primeiro elemento*/
+.group:nth-child(1) {
+  min-height: 19rem;
+}
+
+/*formatação da logo do instagram*/
+
+.insta-logo {
+  height: 3rem;
+}
+
+/*formatação da area foto de perfil*/
+
+.foto-perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*formatação da img da foto do perfil*/
+
+.foto-perfil img {
+  height: 6rem;
+}
+
+/*formatacao da area de login*/
+
+.insta-login {
+  background-color: #0095f6;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/*formatacao da area de logout*/
+
+.insta-logout {
+  color: #0095f6;
+  margin-top: 1rem;
+}
+
+/*formatacao da area de troca de conta e cadastro*/
+
+.not-account {
+  color: rgb(160, 160, 160);
+}
+
+/*formatacao dos links de trocar conta e cadastro*/
+
+.linkblue {
+  color: #0095f6;
+}
+
+/*formatacao da area de download*/
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+/*formatacao da area dos botes de download*/
+
+.download {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 35%;
+    }
+
+/*formatação dos botoes*/
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+/*formatacao do botao da appstore*/
+
+.app-download:nth-child(1) {
+    background-image: url('./images/apple-button.png');
+}
+
+/*formatacao do botao da playstore*/
+
+.app-download:nth-child(2) {
+    background-image: url('./images/googleplay-button.png');
+}
+
+a {
+    color: #0095f6;
+}
+
+/*tratamento da responsividade*/
+/* media queries */ 
+
+@media (max-width: 1024px) { /*seta largura da janela em <= 1024px*/
+    .insta-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) { /*trata para responsividade no celular*/
+    body {
+        background-color: white;
+    }
+
+    .insta-wrapper {
+        width: 90%;
+    }
+
+    .insta-phone {
+        display: none;
+    }
+
+    .insta-continue {
+        width: 100%;
+    }
+
+    .group {
+        border: 1px solid transparent;
+    }
+}
